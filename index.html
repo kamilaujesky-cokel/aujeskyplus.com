@@ -6,7 +6,7 @@
 <title>AUJESKY+</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
 <style>
   :root{
     --black:#000000;
@@ -14,6 +14,14 @@
     --dim:rgba(255,255,255,.55);
     --line:rgba(255,255,255,.18);
   }
+  /* Nazvy projektov maju byt vo Founders Grotesk (Klim, licencovany rez).
+     Kym nemame webfont subory, bezi na nich proxy z dizajn manualu:
+     Archivo 72% sirka / 700 / tracking .015em.
+     Po zakupeni licencie: odkomentuj @font-face nizsie, hod .woff2 do fonts/
+     a v .row__name nahrad font-stretch:72% za font-family:'Founders Grotesk'. */
+  /* @font-face{font-family:'Founders Grotesk';
+       src:url('fonts/founders-grotesk-bold.woff2') format('woff2');
+       font-weight:700;font-style:normal;font-display:swap} */
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{background:var(--black);color:var(--white);font-family:'Archivo',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
@@ -53,8 +61,8 @@
   }
   .row__name{
     font-size:clamp(28px,4.6vw,58px);
-    font-weight:600;line-height:1.1;
-    text-transform:uppercase;white-space:nowrap;
+    font-weight:700;font-stretch:72%;line-height:1.1;
+    letter-spacing:.015em;text-transform:uppercase;white-space:nowrap;
   }
   .row__cat{margin-left:auto;font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);flex:none}
   .row:hover,.row:focus-visible{background:var(--white);color:var(--black)}
